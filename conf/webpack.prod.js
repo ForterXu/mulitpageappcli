@@ -1,6 +1,6 @@
 const merge = require('webpack-merge');
 const baseConf = require('./webpack.base');
-const { prod,template } = require('./config');
+const { prod,template } = require('../app.config');
 const { resolve } = require('./utils');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');

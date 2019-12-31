@@ -1,7 +1,4 @@
 const path = require('path');
-function resolve(url) {
-  return path.resolve(__dirname, '..', url);
-}
 
 // 配置修改需重启服务
 module.exports = {
@@ -14,7 +11,7 @@ module.exports = {
   },
   // 业务代码需要全局引入，从这里配置
   commonEntry: {
-    common: resolve('src/common/common.js')
+    common: path.resolve(__dirname, 'src/common/common.js')
   },
   // 是否包含模板页开发 开启后会在生产打包中将templateDirPath配置位置的文件夹复制到打包生成的目录下
   template: {

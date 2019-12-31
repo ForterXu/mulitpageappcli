@@ -1,12 +1,12 @@
 const utils = require('./utils');
 const webpack = require('webpack');
-const conf = require('./config');
+const conf = require('../app.config');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const devMode = process.env.NODE_ENV != 'production';
 const { resolve } = require('./utils');
-const { commonEntry,globModule } = require('./config');
+const { commonEntry,globModule } = conf;
 
 // 构建entry、plugin
 const entryMap = utils.getEntryList();
@@ -105,7 +105,6 @@ module.exports = {
     new CleanWebpackPlugin(),
   ],
   optimization: {
-    moduleIds: hashed,
     namedChunks: true,
     runtimeChunk: {
       name: 'runtime'

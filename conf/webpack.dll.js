@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const { globModule } = require('./config');
+const { globModule } = require('../app.config');
 
 module.exports = {
   mode: 'production',
