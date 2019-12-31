@@ -12,6 +12,7 @@ const { commonEntry,globModule } = require('./config');
 const entryMap = utils.getEntryList();
 const htmlPluginArr = utils.getHtmlWebpackPlugin(entryMap,commonEntry,devMode);
 const DllRepluginArr = utils.getDLLreference(globModule,devMode);
+const pagesNum = htmlPluginArr.length;
 
 module.exports = {
   entry: {...commonEntry, ...entryMap},
@@ -118,9 +119,16 @@ module.exports = {
         },
         base: {
             name: 'base',
-            minChunks: 2,
+            minChunks: Math.ceil(pagesNum/2),
             priority: -20,
             reuseExistingChunk: true
+        },
+        corejs: {
+          test: /[\\/]node_modules[\\/](core-js|raf|@babel|babel)[\\/]/,
+          name: 'corejs',
+          // minChunks: Math.ceil(pagesNum/2),
+          priority: -9,
+          reuseExistingChunk: true
         }
       }
     }

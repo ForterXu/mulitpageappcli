@@ -40,7 +40,7 @@ function getHtmlWebpackPlugin(entryMap = {},commonEntry = {},devMode = true) {
     htmlWebpackPluginArr.push(new HtmlWebpackPlugin({
       template: entryPath,
       filename: entryPath.slice(index + 6),
-      chunks: ['runtime', 'vendors', 'base', 'bootstrap', ...commonChunksArr, key],
+      chunks: ['runtime', 'corejs', 'vendors', 'base', ...commonChunksArr, key],
       minify: devMode ? {} : {
         removeComments: true,
         collapseWhitespace: true,
