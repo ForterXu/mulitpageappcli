@@ -8,10 +8,10 @@
     "*.scss"
   ],
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --config ./conf/webpack.dev.js",
-    "dev-build": "webpack --progress --config ./conf/webpack.dev.js",
-    "build": "cross-env NODE_ENV=production webpack --progress --config ./conf/webpack.prod.js",
-    "build:dll": "webpack --progress --config ./conf/webpack.dll.js"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./conf/webpack.dev.js",
+    "dev-build": "webpack --config ./conf/webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config ./conf/webpack.prod.js",
+    "build:dll": "webpack --config ./conf/webpack.dll.js"
   },
   "keywords": [
     "mulit",
