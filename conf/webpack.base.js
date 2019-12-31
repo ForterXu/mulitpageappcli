@@ -30,7 +30,8 @@ module.exports = {
             limit: 8192,
             outputPath: `${devMode ? conf.dev.resourcePath : conf.prod.resourcePath}/images/`,
             name: '[name]_[hash].[ext]',
-            mimetype: 'image/png'
+            mimetype: 'image/png',
+            esModule: false
           }
         }]
       },
@@ -72,6 +73,15 @@ module.exports = {
           'postcss-loader',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.(html)$/,
+        use: {
+          loader: 'html-loader',
+          options: {
+            attrs: [':data-src',':src']
+          }
+        }
       }
     ]
   },
