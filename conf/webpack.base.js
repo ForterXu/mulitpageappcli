@@ -118,11 +118,11 @@ module.exports = {
             test: /[\\/]node_modules[\\/]/,
             priority: -10,
             name: 'vendors',
-            chunks: 'initial'
+            // chunks: 'initial'
         },
         base: {
             name: 'base',
-            minChunks: Math.ceil(pagesNum/2),
+            minChunks: Math.ceil(pagesNum/3),
             priority: -20,
             reuseExistingChunk: true
         },
