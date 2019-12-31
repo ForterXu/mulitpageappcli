@@ -105,6 +105,8 @@ module.exports = {
     new CleanWebpackPlugin(),
   ],
   optimization: {
+    moduleIds: hashed,
+    namedChunks: true,
     runtimeChunk: {
       name: 'runtime'
     },
@@ -115,7 +117,8 @@ module.exports = {
         vendors: {
             test: /[\\/]node_modules[\\/]/,
             priority: -10,
-            name: 'vendors'
+            name: 'vendors',
+            chunks: 'initial'
         },
         base: {
             name: 'base',
