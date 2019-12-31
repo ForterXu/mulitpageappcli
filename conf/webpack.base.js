@@ -101,6 +101,9 @@ module.exports = {
       $: 'jquery',
       popper: 'popper'
     }),
+    new webpack.DefinePlugin({
+      NODE_ENV: devMode ? 'development' : 'production'
+    }),
     new CleanWebpackPlugin(),
   ],
   optimization: {

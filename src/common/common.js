@@ -1,4 +1,4 @@
-// import 'bootstrap/dist/css/bootstrap.min.css'
 import './common.scss'
+import './webConf'
 
 ///////common代码////////
