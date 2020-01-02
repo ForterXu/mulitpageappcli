@@ -13,7 +13,11 @@
     "build": "cross-env NODE_ENV=production webpack --config ./conf/webpack.prod.js",
     "build:dll": "webpack --config ./conf/webpack.dll.js"
   },
-  "keywords": {{ keywords }},
+  "keywords": {{each keywords}}
+    [
+      {{$value}},
+    ]
+  {{/each}},
   "author": "{{ author }}",
   "license": "MIT",
   "devDependencies": {
