@@ -49,7 +49,7 @@
     "popper.js": "^1.16.0",
     {{/if}}
     {{if isJquery}}
-    jquery": "^3.4.1",
+    "jquery": "^3.4.1",
     {{/if}}
     "webpack-merge": "^4.2.2"
   }
