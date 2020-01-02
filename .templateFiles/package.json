@@ -44,6 +44,13 @@
     "webpack": "^4.41.4",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1",
+    {{if isBootstrap}}
+    "bootstrap": "^4.4.1",
+    "popper.js": "^1.16.0",
+    {{/if}}
+    {{if isJquery}}
+    jquery": "^3.4.1",
+    {{/if}}
     "webpack-merge": "^4.2.2"
   }
 }
