@@ -13,11 +13,10 @@
     "build": "cross-env NODE_ENV=production webpack --config ./conf/webpack.prod.js",
     "build:dll": "webpack --config ./conf/webpack.dll.js"
   },
-  "keywords": {{each keywords}}
-    [
-      {{$value}},
-    ]
-  {{/each}},
+  "keywords": [
+    "{{ name }}",
+    "app"
+  ],
   "author": "{{ author }}",
   "license": "MIT",
   "devDependencies": {
@@ -46,14 +45,5 @@
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1",
     "webpack-merge": "^4.2.2"
-  },
-  "dependencies": {
-    {{if isJquery}}
-    "jquery": "^3.4.1",
-    {{/if}}
-    {{if isBootstrap}}
-    "bootstrap": "^4.4.1",
-    "popper.js": "^1.16.0"
-    {{/if}}
   }
 }
