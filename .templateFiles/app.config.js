@@ -1,5 +1,5 @@
 const path = require('path');
-
+ 
 // 配置修改需重启服务
 module.exports = {
   // 页面入口文件的后缀约定
